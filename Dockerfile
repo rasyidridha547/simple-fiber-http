@@ -22,7 +22,7 @@ COPY . .
 
 RUN go mod tidy
 
-RUN GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /simple-fiber-http
+RUN go build -o /simple-fiber-http
 
 
 FROM scratch
