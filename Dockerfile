@@ -22,7 +22,7 @@ COPY . .
 
 RUN go mod tidy
 
-RUN go build -o /simple-fiber-http
+RUN CGO_ENABLED=0 go build -o /simple-fiber-http
 
 
 FROM scratch
