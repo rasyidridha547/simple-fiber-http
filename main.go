@@ -29,12 +29,15 @@ func main() {
 }
 
 func getName(c *fiber.Ctx) error {
+	now := time.Now()
+
 	name := c.Params("name")
 
 	result := fmt.Sprintf("Hello, %+v", name)
 
 	return c.Status(fiber.StatusOK).JSON(fiber.Map{
-		"status_code": fiber.StatusOK,
-		"message":     result,
+		"status_code":   fiber.StatusOK,
+		"message":       result,
+		"response_time": time.Since(now).String(),
 	})
 }
