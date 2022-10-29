@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Mi-24 Hind",
+		"year": 1964,
+        "size": "Heavy",
+		"type": "Attack Helicopter"
+    },
+    {
+        "name": "AH-64 Apache",
+	    "year": 1980,
+        "size": "Heavy",
+	    "type": "Attack Helicopter"
+    },
+    {
+        "name": "AH-6 Little Bird",
+		"year": 1960,
+        "size": "Light",
+		"type": "Scout Helicopter"
+    },
+    {
+        "name": "Mi-8",
+		"year": 1960,
+        "size": "Medium",
+		"type": "Transport Helicopter"
+    }
+]

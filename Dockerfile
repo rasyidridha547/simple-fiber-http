@@ -31,6 +31,7 @@ FROM scratch
 COPY --from=build /etc/passwd /etc/passwd
 COPY --from=build /etc/group /etc/group
 
+COPY --from=build /app/helicopter.json /
 COPY --from=build /simple-fiber-http /simple-fiber-http
 
 USER appuser:appuser
