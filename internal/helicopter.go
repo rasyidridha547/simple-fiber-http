@@ -63,10 +63,11 @@ func NameHelicopter(helicopterName string) model.Helicopter {
 
 		if strings.Contains(lowercase, helicopterName) {
 			result = append(result, helicopter)
-			break
-		} else {
-			return nil
 		}
+	}
+
+	if len(result) == 0 {
+		return nil
 	}
 
 	return result
