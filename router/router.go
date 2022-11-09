@@ -8,8 +8,11 @@ import (
 
 func Routes(app *fiber.App) {
 	// root
-	app.Get("/", handler.HelloWorld)
-	app.Get("/user/:name", handler.Name)
+	root := app.Group("/", logger.New())
+
+	root.Get("", handler.HelloWorld)
+	root.Get("/user/:name", handler.Name)
+	root.Get("/health", handler.Health)
 
 	chopper := app.Group("/chopper", logger.New())
 

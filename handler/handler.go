@@ -47,6 +47,12 @@ func Name(c *fiber.Ctx) error {
 	})
 }
 
+func Health(c *fiber.Ctx) error {
+	return c.Status(fiber.StatusOK).JSON(fiber.Map{
+		"message": "service is alive!",
+	})
+}
+
 func HelicopterType(c *fiber.Ctx) error {
 	chopperType := c.Query("name")
 
