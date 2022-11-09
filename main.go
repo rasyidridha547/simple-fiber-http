@@ -19,7 +19,7 @@ func main() {
 	ch := make(chan os.Signal, 1)
 	signal.Notify(ch, os.Interrupt)
 	go func() {
-		_ = <-ch
+		<-ch
 		log.Println("Gracefully shutting down...")
 		_ = app.Shutdown()
 	}()
